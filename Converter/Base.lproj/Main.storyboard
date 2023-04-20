@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="L4J-ah-3yu">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Temperature-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="TemperatureViewController" customModule="Converter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQn-qL-nOs">
+                                <rect key="frame" x="105" y="164" width="204" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="BrJ-ej-g6O"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Convert C to F"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="BrJ-ej-g6O"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="ConvertF:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wk1-yD-SJU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSO-DV-dx7">
+                                <rect key="frame" x="105" y="238" width="204" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Convert F to C"/>
+                                <connections>
+                                    <action selector="ConvertC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4bz-ar-9px"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03d-VH-ie4">
+                                <rect key="frame" x="70" y="316" width="274" height="166"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="166" id="hqJ-IL-yAg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Temperature" textAlignment="center" minimumFontSize="50" translatesAutoresizingMaskIntoConstraints="NO" id="Umk-Xp-ZMf">
+                                <rect key="frame" x="68" y="67.5" width="275" height="69.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eSO-DV-dx7" firstAttribute="top" secondItem="NQn-qL-nOs" secondAttribute="bottom" constant="26" id="5FG-4G-6rY"/>
+                            <constraint firstItem="NQn-qL-nOs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="105" id="9iS-VR-ntf"/>
+                            <constraint firstItem="Umk-Xp-ZMf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="68" id="Ayu-Np-tAB"/>
+                            <constraint firstItem="NQn-qL-nOs" firstAttribute="leading" secondItem="eSO-DV-dx7" secondAttribute="leading" id="Cc4-qH-1aj"/>
+                            <constraint firstItem="03d-VH-ie4" firstAttribute="centerX" secondItem="NQn-qL-nOs" secondAttribute="centerX" id="NSU-Td-7ZW"/>
+                            <constraint firstItem="03d-VH-ie4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="PEo-Ch-db5"/>
+                            <constraint firstItem="03d-VH-ie4" firstAttribute="top" secondItem="eSO-DV-dx7" secondAttribute="bottom" constant="30" id="RjP-ZX-NGf"/>
+                            <constraint firstItem="03d-VH-ie4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aTe-CY-BsA"/>
+                            <constraint firstItem="03d-VH-ie4" firstAttribute="centerX" secondItem="eSO-DV-dx7" secondAttribute="centerX" id="cgA-M9-ZTQ"/>
+                            <constraint firstItem="NQn-qL-nOs" firstAttribute="top" secondItem="Umk-Xp-ZMf" secondAttribute="bottom" constant="27" id="fwI-4c-4aU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Umk-Xp-ZMf" secondAttribute="trailing" symbolic="YES" id="gYA-b4-6fo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="03d-VH-ie4" secondAttribute="bottom" constant="331" id="nrT-N2-ICx"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Temperature" image="temperature" id="6kG-fM-Si2" userLabel="Temperature"/>
+                    <connections>
+                        <outlet property="TempLabel" destination="03d-VH-ie4" id="Fxy-TM-w3L"/>
+                        <outlet property="Temperature" destination="Umk-Xp-ZMf" id="VJQ-FW-HiN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1786.9565217391305" y="-246.42857142857142"/>
+        </scene>
+        <!--Currency-->
+        <scene sceneID="u0x-bh-ELv">
+            <objects>
+                <viewController id="o2t-ZM-JGS" customClass="CurrencyViewController" customModule="Converter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CcU-M5-231">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Currency" textAlignment="center" minimumFontSize="50" translatesAutoresizingMaskIntoConstraints="NO" id="Aaj-Kr-ahf">
+                                <rect key="frame" x="68" y="84.5" width="275" height="69.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="275" id="3DZ-I5-hvU"/>
+                                    <constraint firstAttribute="height" constant="110" id="FoU-hn-fhY"/>
+                                    <constraint firstAttribute="width" constant="275" id="xNZ-s8-pbD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="3DZ-I5-hvU"/>
+                                        <exclude reference="FoU-hn-fhY"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tvE-g2-axg">
+                                <rect key="frame" x="70" y="188" width="271" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Convert CAD to USD"/>
+                                <connections>
+                                    <action selector="ConvertCADtoUSD:" destination="o2t-ZM-JGS" eventType="touchUpInside" id="l7j-2t-TUG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VSF-b8-R1I">
+                                <rect key="frame" x="70" y="320" width="274" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="ke0-IA-JL1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IAv-vW-biO">
+                                <rect key="frame" x="68" y="242" width="275" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Convert USD to CAD"/>
+                                <connections>
+                                    <action selector="ConvertUSDtoCAD:" destination="o2t-ZM-JGS" eventType="touchUpInside" id="6VQ-IQ-Mj0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3ZW-CS-N3B"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Aaj-Kr-ahf" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="IAv-vW-biO" secondAttribute="trailing" id="2tK-X8-IiX"/>
+                            <constraint firstItem="Aaj-Kr-ahf" firstAttribute="leading" secondItem="IAv-vW-biO" secondAttribute="leading" id="504-wu-yq9"/>
+                            <constraint firstItem="VSF-b8-R1I" firstAttribute="leading" secondItem="tvE-g2-axg" secondAttribute="leading" id="5Kv-mR-D9e"/>
+                            <constraint firstItem="Aaj-Kr-ahf" firstAttribute="trailing" secondItem="IAv-vW-biO" secondAttribute="trailing" id="5tM-4m-EPg"/>
+                            <constraint firstItem="VSF-b8-R1I" firstAttribute="centerX" secondItem="CcU-M5-231" secondAttribute="centerX" id="6eX-4G-2C3"/>
+                            <constraint firstItem="VSF-b8-R1I" firstAttribute="top" secondItem="IAv-vW-biO" secondAttribute="bottom" constant="30" id="8Sm-1q-fCQ"/>
+                            <constraint firstItem="3ZW-CS-N3B" firstAttribute="bottom" secondItem="VSF-b8-R1I" secondAttribute="bottom" constant="309" id="D0R-A7-aCt"/>
+                            <constraint firstItem="Aaj-Kr-ahf" firstAttribute="leading" secondItem="3ZW-CS-N3B" secondAttribute="leading" constant="68" id="DqR-D9-H4Z"/>
+                            <constraint firstItem="VSF-b8-R1I" firstAttribute="leading" secondItem="3ZW-CS-N3B" secondAttribute="leading" constant="70" id="E9r-mQ-iO4"/>
+                            <constraint firstItem="Aaj-Kr-ahf" firstAttribute="centerX" secondItem="CcU-M5-231" secondAttribute="centerX" id="Hvp-wL-eXZ"/>
+                            <constraint firstItem="tvE-g2-axg" firstAttribute="top" secondItem="Aaj-Kr-ahf" secondAttribute="bottom" constant="32" id="Mzb-7k-kKC"/>
+                            <constraint firstItem="Aaj-Kr-ahf" firstAttribute="leading" secondItem="VSF-b8-R1I" secondAttribute="leading" id="ain-hs-1PL"/>
+                            <constraint firstItem="3ZW-CS-N3B" firstAttribute="bottom" secondItem="VSF-b8-R1I" secondAttribute="bottom" constant="331" id="bNM-Cd-NxO"/>
+                            <constraint firstItem="Aaj-Kr-ahf" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tvE-g2-axg" secondAttribute="trailing" id="cb2-up-fpA"/>
+                            <constraint firstItem="Aaj-Kr-ahf" firstAttribute="top" secondItem="CcU-M5-231" secondAttribute="topMargin" constant="40.5" id="epu-yZ-Vbr"/>
+                            <constraint firstItem="Aaj-Kr-ahf" firstAttribute="top" secondItem="3ZW-CS-N3B" secondAttribute="top" constant="25" id="nHc-zH-W4d"/>
+                            <constraint firstItem="Aaj-Kr-ahf" firstAttribute="leading" secondItem="IAv-vW-biO" secondAttribute="leading" id="pP2-wB-Iic"/>
+                            <constraint firstItem="Aaj-Kr-ahf" firstAttribute="centerX" secondItem="tvE-g2-axg" secondAttribute="centerX" id="qZD-Up-82t"/>
+                            <constraint firstItem="Aaj-Kr-ahf" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="VSF-b8-R1I" secondAttribute="trailing" id="wJf-aA-SPn"/>
+                            <constraint firstItem="Aaj-Kr-ahf" firstAttribute="leading" secondItem="tvE-g2-axg" secondAttribute="leading" id="wzQ-N9-HSf"/>
+                            <constraint firstItem="VSF-b8-R1I" firstAttribute="top" secondItem="IAv-vW-biO" secondAttribute="bottom" constant="26" id="ytK-9R-tQ9"/>
+                            <constraint firstItem="tvE-g2-axg" firstAttribute="top" secondItem="Aaj-Kr-ahf" secondAttribute="bottom" constant="34" id="zjw-jf-w8C"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="D0R-A7-aCt"/>
+                                <exclude reference="2tK-X8-IiX"/>
+                                <exclude reference="504-wu-yq9"/>
+                                <exclude reference="Hvp-wL-eXZ"/>
+                                <exclude reference="ain-hs-1PL"/>
+                                <exclude reference="cb2-up-fpA"/>
+                                <exclude reference="nHc-zH-W4d"/>
+                                <exclude reference="wJf-aA-SPn"/>
+                                <exclude reference="wzQ-N9-HSf"/>
+                                <exclude reference="Mzb-7k-kKC"/>
+                                <exclude reference="ytK-9R-tQ9"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Currency" image="dollar" id="ITY-zp-DeB" userLabel="Currency"/>
+                    <connections>
+                        <outlet property="CurrencyAmount" destination="Aaj-Kr-ahf" id="sIg-2w-P6E"/>
+                        <outlet property="CurrencyExchange" destination="VSF-b8-R1I" id="HmX-Uk-S2F"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MIe-5p-2L6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1718.840579710145" y="484.82142857142856"/>
+        </scene>
+        <!--Distance-->
+        <scene sceneID="tdA-ep-Zu4">
+            <objects>
+                <viewController id="ZM9-eN-icE" customClass="DistanceViewController" customModule="Converter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1pm-LH-EaZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Distance" textAlignment="center" minimumFontSize="50" translatesAutoresizingMaskIntoConstraints="NO" id="lMq-za-wFG">
+                                <rect key="frame" x="68" y="84.5" width="275" height="69.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="95n-k9-xPJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="95n-k9-xPJ"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TbK-Dm-OBu">
+                                <rect key="frame" x="70" y="316" width="274" height="166"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="139" id="JmZ-gf-bxH"/>
+                                    <constraint firstAttribute="height" constant="166" id="vPZ-hl-XEM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="JmZ-gf-bxH"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y5t-vC-x1P">
+                                <rect key="frame" x="30" y="238" width="354" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Convert Miles to Kilometers"/>
+                                <connections>
+                                    <action selector="ConvertMilestoKM:" destination="ZM9-eN-icE" eventType="touchUpInside" id="p9E-W8-WRX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WuR-D0-VRI">
+                                <rect key="frame" x="30" y="162" width="354" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="E7U-mk-wus"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Convert Kilometers to Miles"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="E7U-mk-wus"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="ConvertKMtoMiles:" destination="ZM9-eN-icE" eventType="touchUpInside" id="Uul-dg-ueN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1K7-K6-6Ls"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1K7-K6-6Ls" firstAttribute="bottom" secondItem="TbK-Dm-OBu" secondAttribute="bottom" constant="311" id="3mp-jP-G3I"/>
+                            <constraint firstItem="lMq-za-wFG" firstAttribute="top" secondItem="1K7-K6-6Ls" secondAttribute="top" constant="40.5" id="7Ov-VU-WoR"/>
+                            <constraint firstItem="WuR-D0-VRI" firstAttribute="leading" secondItem="y5t-vC-x1P" secondAttribute="leading" id="7Z9-ap-bG0"/>
+                            <constraint firstItem="TbK-Dm-OBu" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lMq-za-wFG" secondAttribute="trailing" constant="-31" id="9Wi-Jn-jm7"/>
+                            <constraint firstItem="lMq-za-wFG" firstAttribute="leading" secondItem="1K7-K6-6Ls" secondAttribute="leading" constant="68" id="BwG-CM-6bh"/>
+                            <constraint firstItem="TbK-Dm-OBu" firstAttribute="centerX" secondItem="WuR-D0-VRI" secondAttribute="centerX" id="CEx-QQ-NOE"/>
+                            <constraint firstItem="WuR-D0-VRI" firstAttribute="top" secondItem="lMq-za-wFG" secondAttribute="bottom" constant="8" symbolic="YES" id="IMM-8b-iNL"/>
+                            <constraint firstItem="1K7-K6-6Ls" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="WuR-D0-VRI" secondAttribute="trailing" symbolic="YES" id="JuY-pc-yMJ"/>
+                            <constraint firstItem="TbK-Dm-OBu" firstAttribute="top" secondItem="y5t-vC-x1P" secondAttribute="bottom" constant="30" id="KDk-bz-rl2"/>
+                            <constraint firstItem="TbK-Dm-OBu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1K7-K6-6Ls" secondAttribute="leading" id="PbE-pO-iPO"/>
+                            <constraint firstItem="TbK-Dm-OBu" firstAttribute="centerX" secondItem="y5t-vC-x1P" secondAttribute="centerX" id="RLT-lf-FI0"/>
+                            <constraint firstItem="TbK-Dm-OBu" firstAttribute="leading" secondItem="lMq-za-wFG" secondAttribute="leading" constant="50" id="SCJ-ER-RQK"/>
+                            <constraint firstItem="WuR-D0-VRI" firstAttribute="leading" secondItem="1K7-K6-6Ls" secondAttribute="leading" constant="22" id="SuO-wk-rEo"/>
+                            <constraint firstItem="1K7-K6-6Ls" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="y5t-vC-x1P" secondAttribute="trailing" symbolic="YES" id="VaA-Y5-3KL"/>
+                            <constraint firstItem="lMq-za-wFG" firstAttribute="top" secondItem="1K7-K6-6Ls" secondAttribute="top" id="Y8q-wl-Ykh"/>
+                            <constraint firstItem="TbK-Dm-OBu" firstAttribute="leading" secondItem="1K7-K6-6Ls" secondAttribute="leading" constant="70" id="ai1-hs-pDJ"/>
+                            <constraint firstItem="1K7-K6-6Ls" firstAttribute="bottom" secondItem="TbK-Dm-OBu" secondAttribute="bottom" constant="331" id="cXr-cU-zck"/>
+                            <constraint firstItem="1K7-K6-6Ls" firstAttribute="trailing" secondItem="lMq-za-wFG" secondAttribute="trailing" constant="71" id="emn-QN-3Oq"/>
+                            <constraint firstItem="TbK-Dm-OBu" firstAttribute="centerX" secondItem="1pm-LH-EaZ" secondAttribute="centerX" id="heN-rb-rnb"/>
+                            <constraint firstItem="TbK-Dm-OBu" firstAttribute="top" secondItem="y5t-vC-x1P" secondAttribute="bottom" constant="39" id="lUE-cz-zNv"/>
+                            <constraint firstItem="WuR-D0-VRI" firstAttribute="top" secondItem="lMq-za-wFG" secondAttribute="bottom" constant="36" id="mnC-Ab-wbW"/>
+                            <constraint firstItem="TbK-Dm-OBu" firstAttribute="centerX" secondItem="1pm-LH-EaZ" secondAttribute="centerX" id="phZ-pj-dcL"/>
+                            <constraint firstItem="y5t-vC-x1P" firstAttribute="top" secondItem="WuR-D0-VRI" secondAttribute="bottom" constant="8" id="ran-M1-heH"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="3mp-jP-G3I"/>
+                                <exclude reference="JuY-pc-yMJ"/>
+                                <exclude reference="VaA-Y5-3KL"/>
+                                <exclude reference="Y8q-wl-Ykh"/>
+                                <exclude reference="7Z9-ap-bG0"/>
+                                <exclude reference="SuO-wk-rEo"/>
+                                <exclude reference="mnC-Ab-wbW"/>
+                                <exclude reference="ran-M1-heH"/>
+                                <exclude reference="9Wi-Jn-jm7"/>
+                                <exclude reference="PbE-pO-iPO"/>
+                                <exclude reference="SCJ-ER-RQK"/>
+                                <exclude reference="heN-rb-rnb"/>
+                                <exclude reference="lUE-cz-zNv"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Distance" image="ruler" id="Dmq-3v-Cd1"/>
+                    <connections>
+                        <outlet property="DistanceAmount" destination="lMq-za-wFG" id="iZC-mH-ENi"/>
+                        <outlet property="DistanceExchange" destination="TbK-Dm-OBu" id="9Hk-Gt-1FO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lyq-TW-YXm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1600.0000000000002" y="1350"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="a1r-vD-33S">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="L4J-ah-3yu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WV0-gM-fkS">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="q12-VE-kO7"/>
+                        <segue destination="o2t-ZM-JGS" kind="relationship" relationship="viewControllers" id="bYO-26-TCU"/>
+                        <segue destination="ZM9-eN-icE" kind="relationship" relationship="viewControllers" id="2oL-MO-817"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cmb-4U-CYg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="854" y="485"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dollar" width="25" height="25"/>
+        <image name="ruler" width="25" height="25"/>
+        <image name="temperature" width="48.5" height="32.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
